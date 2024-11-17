@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="source/fav.svg" type="image/x-icon">
+
+    <title>O mnie</title>
+    <style>
+
+        h4
+        {
+            background-color: var(--dark);
+            padding: 0 8rem 2rem 8rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        #space
+        {
+            background-image: url(source/animacje\ na\ stronę/01pink.png);
+            width: 100vw;
+            max-width: 100%;
+            height: 50vh;
+            object-fit: cover;
+            background-repeat: repeat;
+            background-attachment: fixed, local;
+        }
+
+        @media only screen and (max-width:1200px) {
+            .pins h1
+            {
+            padding-top: 2rem;
+            padding-left: 15vw;
+            }
+
+            .pin
+            {
+                padding-top: var(--small);
+                padding-bottom: var(--small);
+            }
+
+            .button
+            {
+                width: 180px !important;
+            }
+        }
+
+
+        @media only screen and (max-width:992px) {@media only screen and (max-width:992px) {
+        
+        .row>div
+        {
+            padding-left: 0;
+            padding-right: 0 !important;
+        }
+        .main .button
+            {
+                justify-content: center ;
+                margin: 1rem;
+                width: 130px !important;
+
+            }
+        .main .button p
+        {
+           margin: 0;
+        }    
+        .main .button i
+        {
+           display: none;
+        }  
+        .main .button p
+        {
+            margin: 0 !important;
+        }
+
+        h4
+        {
+            padding-left:36px;
+            text-align: left;
+        }
+    }
+}
+    @media only screen and (max-width:768px) {
+        
+        #space
+        {
+            height: 35vh;
+        }
+
+        .pins h1
+            {
+            text-align: center;
+            padding-left: 0 !important;
+            }
+
+            .pin
+            {
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                justify-content:left !important;
+                padding-left: var(--small) !important;
+            }
+            .pin img
+            {
+                padding: 0;
+                width: 58px;
+                height: 58px;
+            }
+        }
+    
+        #phoneAvatar
+        {
+            display: none;
+        }
+        @media only screen and (max-width:420px) {
+            #phoneAvatar
+            {
+                display: block;
+                position: relative;
+                right: 1rem;
+                bottom: 2.5rem;
+                
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(31, 33, 37);">
+        <div class="container-fluid pv-0">
+            <a href="index.html" class="navbar-brand"><img src="source/logo niebiesk 2.svg" alt="logo" height="50px"></a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav">
+                  <a href="index.html" class="nav-item nav-link">Strona główna</a>
+                  <a href="oferta.html" class="nav-item nav-link">Oferta</a>
+                  <a href="" class="nav-item nav-link disabled">Realizacje </a>
+                  <a href="oMnie.html" class="nav-item nav-link">O Mnie</a>
+                  <!-- <a href="kontakt.php" class="nav-item nav-link">Kontakt</a> -->
+                </div>
+    
+                <div class="navbar-nav ms-auto d-flex flex-row">
+                 <!-- <a style="padding-right: var(--small);" href="#" class="nav-item nav-link"><i class="bi bi-envelope-fill"></i> </a>-->
+                  <a style="padding-right: var(--small);" href="www.facebook.com/GaboonOlsz/?locale=pl_PL" class="fb-icon"><i class="bi bi-facebook"></i></a>
+                <!--<a style="padding-right: var(--small);" href="#" class="nav-item nav-link"><i class="bi bi-github"></i></a>-->
+                </div>
+              </div>
+              
+              
+        </div>
+                
+    </nav>
+
+        <section class="banner">
+                <h1 style="text-align: end;">O MNIE</h1>
+                <video autoplay muted loop>
+                    <source src="source/animacje na stronę/abc.mp4  " type="video/mp4">
+                  </video>
+        </section>
+        <section class="main oMnie">
+            <h1>Poznaj mnie</h1>
+            <div class="section" style="border-top: 3px solid var(--blue); border-bottom: 3px solid var(--blue); padding:var(--small);" >
+                <div class="row">
+                    <div class="col-lg-8 col-12 leftCon" >
+                        <h2>O mnie</h2>
+                        <p>Witaj! Nazywam się Gabriel i jestem pasjonatem programowania oraz nowych technologii. Od trzech lat zajmuję się tworzeniem stron internetowych, łącząc przy tym moje zamiłowanie do symulacji, tworzenia gier oraz sztucznej inteligencji.</p>
+                        <br>
+                        <h2>Programowanie</h2>
+                        <p>Zależy mi na ciągłym rozwoju i śledzeniu najnowszych trendów w świecie web designu, co pozwala mi oferować nowoczesne i sprawdzone rozwiązania. Pracuję z pełnym zaangażowaniem, dbając o każdy detal, aby efekt końcowy w pełni odzwierciedlał wizję moich klientów.</p>
+                        <br>
+                        <h2>Podejmijmy współpracę!</h2>
+                        <p>Jestem zawsze otwarty na nowe wyzwania. Jeśli szukasz programisty,  web developera, który z pasją i zaangażowaniem podejdzie do Twojego projektu, skontaktuj się ze mną. </p>
+                        <br>
+                    </div>
+                    
+                    <div class="col-12 col-lg-4 text-lg-center text-start rightCon" >
+                        <img src="source/Logo niebiesk 2.svg" class="d-none d-lg-block" style="max-width: 300px; margin-left: auto; margin-right: auto;" alt="logo">
+                        <img src="source/Gabrys.svg" class="d-none d-lg-block" style=" max-width: 300px; margin-left: auto; margin-right: auto; " alt="picture">
+                        <!-- <a href="kontakt.php" type="button" class="btn button rounded-pill  " style=" border-color: var(--blue);color: var(--blue); margin-bottom: 0; width:250px;"><p class="d-none d-lg-block">Kontakt</p><p class="d-block d-lg-none" >Kontakt</p><i class="bi bi-arrow-right"></i></a> <br class="d-lg-block d-none"> -->
+                        <a href="oferta.html" type="button" id="secondbtn" class="btn button rounded-pill ms-lg-0" style="border-color: var(--blue);color: var(--blue); margin-bottom: 0; width: 250px;"><p class="d-none d-lg-block">Moja oferta</p><p class="d-block d-lg-none" >Oferta</p><i class="bi bi-arrow-right"></i></a>
+                        <span><img src="source/Gabrys.svg" alt="picture"  style="height:6rem; float: right;" id="phoneAvatar"></span>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    <!-- <h4 >Razem mozemy stworzyć coś wyjątkowego!</h4>-->
+        <section id="space"></section>
+        
+        <section class="main oMnie" style="padding-top: var(--normal);">
+            <h1>Grafik z którym współpracuję </h1>
+            <div class="section" style="border-top: 3px solid var(--pink); border-bottom: 3px solid var(--pink); padding:var(--small)">
+                <div class="row">
+                    <div class="col-lg-8 col-12 leftCon" >
+                        <h2>O grafiku</h2>
+                        <p>Matylda Hampelska jest młodym i ambitnym grafikiem. Rysowanie to jej pasja od najmłodszych lat. Poświęca mnóstwo czasu na rozwój swoich pasji, między innymi rysunku, grafiki 2D, grafiki 3D, animacji, programowania i  projektowania ubrań.</p>
+                        <br>
+                        <h2>Rola grafika</h2>
+                        <p>Matylda wykonuje większość pracy związanej z wyglądem strony, grafikami oraz animacjami na niej zawartymi. Dzięki jej pomocy wszystko co robię zyskuje na estetyczności, nowoczesności oraz profesjonalizmie. Pracuje ona również sama, jeśli masz pracę dla grafika, zgłoś się do niej!</p>
+                        <br>
+                        
+                    </div>
+                    <div class="col-12 col-lg-4 text-lg-center text-start rightCon">
+                        <img src="source/MAtyld.svg" class="d-none d-lg-block" style=" max-width: 300px; margin-left: auto; margin-right: auto; " alt="picture">
+                        <a href="https://mayumi32.github.io/" type="button" class="btn button rounded-pill  " style=" border-color: var(--pink);color: var(--pink); margin-bottom: 0; width:250px;"><p class="d-none d-lg-block">Portfolio</p><p class="d-block d-lg-none" >Portfolio</p><i class="bi bi-arrow-right"></i></a> <br class="d-lg-block d-none">
+
+                    </div>
+            </div>
+            
+        </section>
+        
+        
+        <footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color: rgb(31, 33, 37) ">
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+              <div class="me-5 d-none d-lg-block">
+                <span>Razem możemy stworzyć coś wyjątkowego!</span>
+              </div>
+              <div>
+                <a href="www.facebook.com/GaboonOlsz/?locale=pl_PL" class="me-4 text-reset fb-icon" style="text-decoration: none;  margin: 0 !important;">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              <!--  <a href="#" class="me-4 text-reset" style="text-decoration: none;">
+                    <i class="bi bi-envelope-fill"></i>
+                </a>
+                <a href="#" class="me-4 text-reset" style="text-decoration: none;">
+                    <i class="bi bi-github"></i>
+                </a>-->
+              </div>
+            </section>
+            <section class="">
+              <div class="container text-center text-md-start mt-5">
+        
+                <div class="row mt-3 " >
+                  <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-0">
+                    <h6 class="text-uppercase fw-bold mb-4 ">
+                      Strony internetowe
+                    </h6>
+                    <p> 
+                        <img src="source/Logo niebiesk 2.svg" alt="logo" style="max-width: 200px;  ">
+                    </p>
+                  </div>
+                  <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        
+                  </div>
+                  <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">
+                      Menu
+                    </h6>
+                    <p>
+                      <a href="index.html" class="text-reset">Strona główna</a>
+                    </p>
+                    <p>
+                      <a href="oferta.html" class="text-reset">Oferta</a>
+                    </p>
+                    <p>
+                      <a href="oMnie.html" class="text-reset">O Mnie</a>
+                    </p>
+                    <p>
+                      <a href="#"  class="text-reset disabled">Realizacje</a>
+                    </p>
+                    <!-- <p>
+                      <a href="kontakt.php" class="text-reset">Kontakt</a>
+                    </p> -->
+                  </div>
+                  <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <h6 class="text-uppercase fw-bold mb-4">Dane kontaktowe</h6>
+                    <p>
+                      <i class="bi bi-envelope-fill"></i>
+                      neatsitespl@gmail.com
+                    </p>
+                    <p><i class="bi bi-facebook"></i> Gabriel Olszewski</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </footer>    
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+          <script src="gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

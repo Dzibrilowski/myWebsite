@@ -1,0 +1,400 @@
+:root
+{
+    --dark: #151516; 
+    --gray: #3D3D44;
+    --light: #C4C6CF;
+    --pink: #C180A5;
+    --blue: #39BECA;
+
+    --big: 8em;
+    --normal: 4em;
+    --small: 2em;
+}
+
+html
+{
+    background-color: var(--dark);
+}
+*
+{
+    color: var(--light);
+    font-weight: 500;
+    font-size: 18px;
+}
+@media only screen and (max-width:768px) {
+    *
+    {
+      font-size: 0.9rem;
+    }
+    h1, h2, h3
+    {
+        font-size: 1.6rem !important;
+    }
+    
+    .banner h1
+    {  
+        top: 150px !important;
+        margin: -1.4rem !important;
+
+    }
+    .banner
+    {
+        margin-bottom: 2vh !important;
+    }
+    #writingText
+    {
+        top: 180px;
+        left: 30px;
+    }
+    #writingText::after
+    {
+        height: 22px;
+    }
+
+    .main
+    {
+      padding-bottom: 0 !important;
+    }
+    .main>.container
+      {
+        padding: var(--small) !important;
+        padding-bottom: 1px;
+      }
+    .main .row
+    {
+      margin-bottom: var(--small) !important;
+    }
+    form
+    {
+        margin-top: var(--normal);
+    }
+    .navbar-nav a
+    {
+        padding-bottom: 1rem;
+    }    
+}
+@media only screen and (max-width:992px) {
+    .banner
+        {
+            height: 70vw !important;
+            margin-bottom: calc(var(--small) + 8px) ;
+        } 
+        .main
+    {
+      padding: var(--small) !important; 
+        }
+    }
+
+.banner
+{
+    height: 100vh;
+    background-color: var(--blue);
+}
+.banner video
+{
+    width: 100vw;
+    max-width: 100%;
+    height: inherit;
+    object-fit: cover;
+
+}
+.banner h1
+{  
+    font-weight: bold;
+    position: relative;
+    text-align: left !important;
+    left: 50px;
+    top: 200px;
+    display: inline;
+    margin-right: -2rem;
+    margin-bottom: -1.2rem;
+
+}
+.main
+{
+    background-color: var(--dark);
+    padding: var(--big);
+    padding-bottom: var(--small);
+}
+.main h1
+{
+    font-weight: bold;
+    margin-bottom: 1em;
+    font-size: 2rem ;
+}
+.main .card
+{
+    background-color: var(--dark);
+    border:3px solid #C4C6CF;
+    border-radius: 20px;
+    margin-bottom: var(--normal);
+}
+.main .card h3
+{
+   border-bottom: 3px solid var(--blue);
+   color: var(--light);
+   padding-bottom: 9px;
+}
+.main li::marker
+{
+    font-family: 'Bootstrap-icons';
+    content: '\F231';
+    font-size: small;
+}
+.main li
+{
+    padding-left: 0.5rem;
+}
+.main ul
+{
+    height: 280px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.slide
+{
+    background-image: url(source/animacje\ na\ stronę/pinkBcgDark.png);
+    background-position: center;
+    background-size: cover;
+    padding: var(--normal);
+    font-size: large;
+    
+}
+.slideTitle
+{
+    padding-left: 41.6px;
+    position: relative;
+    color: rgb(33, 1, 21);
+    border-radius: 100%;
+    font-size: 5rem;
+    font-weight: 800;
+    margin: 0;
+}
+form
+{
+    border: 3px solid var(--light);
+    padding: var(--small);
+    border-radius: var(--small);
+    background-color: rgba(21, 21, 22, 0.7);
+}
+input[type=text], input[type=tel], textarea
+{
+    background-color: var(--gray) !important;
+    border: 1px solid var(--light) !important;
+    color: var(--light) !important;
+    margin-bottom: 1rem;
+}
+.pins
+{
+    background-color: var(--light);
+
+}
+.pins h1, .pins p, .pins h3 
+{
+    color: var(--dark);
+}
+.pin
+{
+    padding-bottom: var(--normal);
+    
+    padding-top: var(--normal);
+}
+.pin>img
+{
+    border-radius: 100%;
+    padding: var(--normal);
+    width: 0;
+}
+.pins h1
+        {
+            padding-left:var(--small);
+            padding-top:var(--small);
+             font-weight: 800;
+        }
+.pin h3
+{
+    border-bottom: 3px solid var(--dark);
+    padding-left: 0.5rem;
+}
+.pin p
+{
+    padding-left: 0.5rem;
+}
+#line
+{
+    border-left: 3px solid var(--light);
+    position: absolute;
+    left: 50%;
+    height: 0vh;
+    z-index: 5;
+}
+#offer>div
+{
+  position: relative;   
+  width: 40%;
+  text-align: center;
+  margin-top: var(--normal);
+  padding-top: var(--normal);
+  z-index: 4;
+}
+#offer p
+{
+    margin: var(--small);
+}
+#offer h3
+{
+    color: var(--blue);
+    border-bottom: 3px solid var(--light);
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+   
+#offer>div:nth-child(3n+2) 
+{
+    left: 10%;
+}
+#offer>div:nth-child(3n) 
+{
+    left: 50%;
+    
+}
+#offer>div:nth-child(3n+1) 
+{
+    left: calc(50% - 10rem);
+    width: 20rem;
+    height: 20rem;
+    background-color: var(--dark);
+    border-radius: 100%;
+    border: 3px solid var(--pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin-top: var(--big) ;
+    z-index: 6;
+    
+}
+#offer>div:nth-child(3n+1)>h3
+{
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+#offer>div:nth-child(3n+1)>p
+{
+    margin-bottom: 0;
+}
+#offer>div:nth-child(3n+1) h3 
+{
+    border: none;
+}
+#offer>div:nth-child(8)
+{
+    border-top: 3px solid var(--light);
+    border-bottom: 3px solid var(--light);
+    background-color: var(--dark);
+    left: 30%;
+    margin-top: var(--big);
+    padding-top: var(--small);
+    z-index: 6;
+}
+
+#offer>div:nth-child(8) h3
+{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.button
+{
+    
+    display: inline-flex !important;
+    justify-content: space-between;
+    margin-bottom: var(--small);
+    margin-top: var(--small);
+}
+.button>:nth-child(n)
+{
+    color: inherit;
+    margin: 0;
+    padding: 0.5rem;
+}
+.navbar a
+{
+    color: var(--light);
+}
+.navbar a:hover
+{
+    color: var(--gray);
+}
+.navbar a:focus
+{
+    color: var(--gray);
+}
+
+.navbar {
+    background: #000000
+}
+
+.nav-item::after {
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: var(--blue);
+    transition: 0.4s
+}
+
+.nav-item:hover::after {
+    width: 100%
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link,
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--blue)
+}
+
+.nav-link {
+    transition: 0.2s
+}
+.fb-icon:hover>i
+{
+    transition: 0.4s;
+    color: rgb(8,102,255);
+}
+.btn:focus{
+    outline: none;
+}
+@keyframes hideSlide {
+    0%{opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@keyframes showSlide {
+    0%{opacity: 0;}
+    100% {opacity: 1;}
+}
+@keyframes loading {
+    0%{width: 0%;}
+    100%{width: 100%;}
+}
+@keyframes unloading {
+    0%{width: 100%;}
+    100%{width: 0%;}
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus
+.btn.active, .btn:active {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}

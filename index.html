@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="source/fav.svg" type="image/x-icon">
+
+    
+
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@300..700&display=swap');
+
+    .main .row
+    {
+        margin-bottom: var(--big);
+    }
+    .main>.container, .main>.container-fluid
+    {
+        border-left: 3px solid var(--light);
+        border-top: 3px solid var(--light);
+        padding: var(--normal);
+         padding-top: var(--big);
+    }
+
+    .slide p
+    {
+      text-shadow: var(--dark) 2px 2px 1px ;
+      font-size: 1.3em !important;   
+    }
+
+    #logoMain
+    {
+      width: 200px;
+      position:relative;
+      left: calc( var(--big) - 110px );
+      bottom: calc( var(--big) + 10px );
+      padding: 10px;
+      margin: -200px;
+      background-color: var(--dark);
+    }
+    #logoMainSmall
+    {
+
+      width: 30vw;
+      background-color: var(--dark);
+    }
+    
+    @media only screen and (max-width:768px) {
+
+
+      .slide
+        {
+          height: 300px !important;
+        }
+      #writingText
+      {
+        left: 30px !important;
+        top: 180px !important;
+        font-size: 18px !important;
+      }
+      #writingText::after
+      {
+        height: 20px !important;
+      }
+      .slide
+      {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        height: 400px;
+        
+      }
+
+      .slide div
+      {
+        flex-direction: column;
+        justify-content: center;    
+        position: relative;
+        bottom: 2rem;
+        
+      }
+      .slideTitle
+      {
+        padding: 3rem 2.5rem;
+        font-size: 5rem !important;
+        
+        padding-bottom: 0;
+
+      }
+      .slide p
+      {
+        position: relative;
+        padding: 0 !important;
+        text-align: center;
+        min-height: 100px;
+        top: 2rem;   
+        font-size: 14px !important;
+        
+      }
+        
+      .borderstartend
+      {
+          border-top: 3px solid var(--blue) !important;
+          border-bottom: 3px solid var(--blue) !important;
+          border-left: 0px !important;
+          margin-top: var(--big);
+      }
+      #secondContainer
+      {
+        border-color: var(--pink);
+      }
+      .main .container, .main .container-fluid
+    {
+        padding: var(--small); /* DODAC NA KAZDA PODSTRONE*/
+    }
+    }
+      
+    @media only screen and (max-width:1200px) {
+        .slide
+        {
+          padding: var(--small)   ;
+          height: 350px;
+        }
+        .slide>button
+        {
+          margin: 0 !important;
+        }
+    }
+   
+
+    span
+    {
+        color: var(--pink);
+    }
+    #timeline
+    {
+      position: relative;
+      height: 100px;
+      bottom: 105px;
+      margin: -100px;
+    }
+    #timeline p
+    {
+      margin: 0;
+    }
+    #writingText
+    {
+      
+      font-size: 1.5rem;
+      font-weight: 300;
+      position: absolute;
+      top: 250px;
+      left: 50px;
+    }
+    #writingText::after
+    {
+      content: "";
+      background-color: var(--pink);
+      width: 3px;
+      height:30px;
+      transform: translateY(30%);
+      right: -5px;
+      position: absolute;
+      animation: blink 1s infinite ;
+    }
+
+    @keyframes blink {
+      40%
+      {
+        opacity: 0;
+      }
+      
+    }
+
+    canvas{ display: block; position: absolute;} /* ---- particles.js container ---- */ 
+    #particles-js{ position:absolute; width: 100%; height: 100%; background-color: #151516;  background-size: cover;} 
+    
+    </style>
+
+    <title>MyWebsite</title>
+</head>
+<body>
+    
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(31, 33, 37);">
+    <div class="container-fluid pv-0">
+        <a href="index.html" class="navbar-brand"><img src="source/logo niebiesk 2.svg" alt="logo" height="50px"></a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav">
+              <a href="index.html" class="nav-item nav-link">Strona główna</a>
+              <a href="oferta.html" class="nav-item nav-link">Oferta</a>
+              <a href="" class="nav-item nav-link disabled">Realizacje </a>
+              <a href="oMnie.html" class="nav-item nav-link">O Mnie</a>
+             <!-- <a href="kontakt.php" class="nav-item nav-link">Kontakt</a> -->
+            </div>
+
+            <div class="navbar-nav ms-auto d-flex flex-row">
+             <!-- <a style="padding-right: var(--small);" href="#" class="nav-item nav-link"><i class="bi bi-envelope-fill"></i> </a>-->
+              <a style="padding-right: var(--small);" href="www.facebook.com/GaboonOlsz/?locale=pl_PL" class="fb-icon"><i class="bi bi-facebook"></i></a>
+            <!--<a style="padding-right: var(--small);" href="#" class="nav-item nav-link"><i class="bi bi-github"></i></a>-->
+            </div>
+          </div>
+          
+          
+    </div>
+            
+</nav>
+      
+    <section class="banner">
+            <div>
+              <h1>STRONY INTERNETOWE </h1>
+              <br>
+              <span id="writingText"></span>
+            </div>
+            
+            <video autoplay muted loop>
+              <source src="source/animacje na stronę/Kolejność 01.mp4" type="video/mp4">
+            </video>
+        
+        
+    </section>
+  <!-- particles.js container --> <div id="particles-js" style="position: absolute !important; left: 0;"></div>  <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <section class="main"  id="firstMain">
+           
+    
+
+      <h1 class="d-block d-md-none" style="position: relative; font-size: 2.5rem; top: 1rem;  margin: 0; height: 0;;">Witaj!</h1>
+        <div class="container-fluid borderstartend" style="padding-bottom: 0; margin-top: var(--normal); z-index: 10; position: relative;">
+          
+          <img id="logoMain" class="d-none d-lg-inline" src="source/Logo niebiesk 1 kopia w kole.svg" alt="logo">
+          <!--<div class="d-none d-md-flex justify-content-around " id="timeline">
+            <p class="align-self-start">projekt graficzny</p>
+            <p class="align-self-end">stworzenie strony</p>
+            <p class="align-self-start">opieka nad witryną</p>  
+          </div> -->
+            <div class="row textBlock">
+                <div class="col-md-10">
+                <h1 class="d-flex justify-content-between align-items-center" style="color: var(--blue);">Kim jestem?
+                  <img id="logoMainSmall" class="d-inline d-md-none" src="source/logo niebiesk 2.svg" alt="logo">
+                </h1>
+                <p>Jestem młodym programistą, który ma za sobą 3&nbsp;lata nauki tworzenia stron internetowych. Codziennie dbam o podnoszenie swoich umiejętności i ciągle się rozwijam, aby dostarczać klientom najlepsze możliwe rozwiązania.</p>    
+                </div>
+                <div class="col-md-2 d-flex">
+                    <a href="oMnie.html" type="button" class="btn align-self-center d-none d-sm-none d-md-block"><i class="bi bi-arrow-right " style="color: var(--blue);"></i></a>
+                    <a href="kontakt.php" type="button" class="btn button rounded-pill d-inline-flex d-sm-inline-flex d-md-none" style="border-color: var(--blue);color: var(--blue);"><p>Poznaj mnie</p><i class="bi bi-arrow-right"></i></a>
+
+                </div>
+            </div>
+
+            <div class="row textBlock">
+                <div class="col-md-10">
+                <h1 style="color: var(--blue);">Co oferuję?</h1>
+                <p>Potrzebujesz strony internetowej, która wyróżni Cię na tle konkurencji? Zajmuję się tworzeniem stron, które są łatwe w obsłudze, szybkie i atrakcyjne wizualnie. Zadbam o każdy szczegół, aby Twoja witryna przyciągała uwagę i budowała zaufanie klientów. </p>    
+                </div>
+                <div class="col-md-2 d-flex">
+                    <a href="oferta.html" type="button" class="btn align-self-center d-none d-sm-none d-md-block"><i class="bi bi-arrow-right" style="color: var(--blue);"></i></a>
+                    <a href="kontakt.php" type="button" class="btn button rounded-pill d-inline-flex d-inline-flex d-md-none"  style="border-color: var(--blue);color: var(--blue); margin-bottom:0"><p>Moja oferta</p><i class="bi bi-arrow-right"></i></a>
+
+                </div>
+            </div>
+
+            <div class="row cards" >
+                <div class="col-xl-4 d-none d-xl-block">
+                    <div class="card">
+                        <div class="card-body ">
+                            <h3 class="card-title text-center">Darmowy <br>projekt</h3>
+                            <ul class="card-text">
+                            <li>Twoja wizja</li>
+                            <li>Projekt graficzny</li>
+                            <li>Wycena</li>
+                            <li>Decyzja o dalszej współpracy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 d-none d-xl-block">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Praca nad <br> stroną WWW</h3>
+                            <ul class="card-text">
+                            <li>Możliwość obserwowania rozwoju witryny</li>
+                            <li>Stworzenie grafik i animacji</li>
+                            <li>Użycie najlepszych technologii</li>
+                            <li>Dbałość o każdy szczegół</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 d-none d-xl-block">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title text-center">Wdrożenie <br> witryny</h3>
+                            <ul class="card-text">
+                            <li> Hosting</li>
+                            <li>Przeszkolenie z obsługi strony</li>
+                            <li>Pomoc techniczna</li>
+                            <li>Zniżka na kolejne projekty!</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="slide d-flex align-items-center justify-content-between   d-flex" id="slajd" style="z-index: 999; position: relative;">
+      <button onclick="changeSlide(-1)" style="margin: var(--normal); background-color: rgba(0, 0, 0, 0) ; border: none;"><i style="font-size: 2.5rem;" class="bi bi-chevron-left"></i></button>
+            <div class=" position-relative" id="slide1" style="left: 0; display: flex !important;" >
+              <h1 class="slideTitle align-self-center">85%</h1>
+                <p style="padding: var(--small); margin: 0 !important;" class="align-self-center">
+                Konsumentów unika firm bez strony internetowej, ponieważ uważa je za mniej wiarygodne. Zainwestuj w swoją wiarygodność!</p>
+            
+              </div>
+            <div class="d-inline position-relative " id="slide2" style="left: 0; display: none !important;" >
+              <h1 class="slideTitle align-self-center">50%</h1>
+                <p style="padding: var(--small); margin: 0 !important;" class="align-self-center">
+                  Użytkowników opuści stronę internetową, jeśli ładuje się ona dłużej niż 3 sekundy. Tworzę strony szybkie i zoptymalizowane.</p>
+            </div>
+            <div class="d-inline position-relative " id="slide3" style="left: 0; display: none !important;" >
+              <h1 class="slideTitle align-self-center">40%</h1>
+                <p style="padding: var(--small); margin: 0 !important;" class="align-self-center">
+                  Osób przestanie angażować się w treści, jeśli układ lub wygląd strony nie jest atrakcyjny. Estetyka i design traktuje priorytetowo! </p>
+            </div>
+            <div class="d-inline position-relative " id="slide4" style="left: 0; display: none !important;" >
+              <h1 class="slideTitle align-self-center">58%</h1>
+                <p style="padding: var(--small); margin: 0 !important;" class="align-self-center">
+                  Całego globalnego ruchu internetowego odbywa się na telefonach. Zadbam o jak najlepszą responzywność strony </p>
+            </div>
+            <button onclick="changeSlide(1)" style="margin: var(--normal); background-color: rgba(0, 0, 0, 0); border: none;" ><i style="font-size: 2.5rem;" class="bi bi-chevron-right" ></i></button>
+            
+    </section>
+    <div class="d-flex" style="position: relative; z-index: 10;">
+      <div style="width: 0%;  background-color: var(--pink) ; height: 5px;" id="loading"> </div>
+    
+    <div style="flex: auto;  background-color: var(--dark); height: 5px;" id="loadingbcg"></div>
+    </div>
+      
+
+
+    <section class="main" id="secondMain" >
+
+        <div class="container " id="secondContainer" style="border-top: none; padding-top: var(--normal); margin: 0; position: relative; z-index: 10;">
+            <div class="row textBlock" style="margin-bottom: var(--normal) !important;">
+                <div class="col-lg-10 col-md-12">
+                <h1 >Kontakt</h1>
+                <p>Chcesz podjąć ze mną współpracę? Masz pytania dotyczące moich usług? 
+                    Napisz na maila: <span  style="color: var(--pink);">neatsitespl@gmail.com</span>.</p>    
+                </div>
+            </div>
+
+            <div class="row" id="textBounce" style="margin-bottom: 0;">
+                <div class="col-lg-10 col-md-12">
+                  <h1>Co mnie wyróżnia</h1>
+                  <p><span>Indywidualne podejście:</span> Współpracuję z klientem na każdym etapie pracy.</p>
+                  <p> <span>Terminowość:</span> Realizuję projekty na czas, dbając o najwyższą jakość wykonania.</p>
+                  <p><span>Innowacyjność:</span> Stale rozwijam moją ofertę, stosując najnowsze rozwiązania technologiczne.</p>    
+                </div>
+            </div>
+
+            <a href="kontakt.php" type="button" class="btn button rounded-pill" style="border-color: var(--pink);color: var(--pink);"><p>Kontakt</p><i class="bi bi-arrow-right"></i></a>
+          </div>
+
+    </section>
+ 
+<footer class="text-center text-lg-start bg-body-tertiary text-muted" style="background-color: rgb(31, 33, 37) ">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+        <span>Razem możemy stworzyć coś wyjątkowego!</span>
+      </div>
+      <div>
+        <a href="www.facebook.com/GaboonOlsz/?locale=pl_PL" class="me-4 text-reset fb-icon" style="text-decoration: none; margin: 0 !important;">
+          <i class="bi bi-facebook"></i>
+        </a>
+      <!--  <a href="#" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="bi bi-envelope-fill"></i>
+        </a>
+        <a href="#" class="me-4 text-reset" style="text-decoration: none;">
+            <i class="bi bi-github"></i>
+        </a>-->
+      </div>
+    </section>
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+
+        <div class="row mt-3 " >
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-0">
+            <h6 class="text-uppercase fw-bold mb-4 ">
+              Strony internetowe
+            </h6>
+            <p> 
+                <img src="source/Logo niebiesk 2.svg" alt="logo" style="max-width: 200px;  ">
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Menu
+            </h6>
+            <p>
+              <a href="index.html" class="text-reset">Strona główna</a>
+            </p>
+            <p>
+              <a href="oferta.html" class="text-reset">Oferta</a>
+            </p>
+            <p>
+              <a href="oMnie.html" class="text-reset">O Mnie</a>
+            </p>
+            <p>
+              <a href="#"  class="text-reset disabled">Realizacje</a>
+            </p>
+            <!-- <p>
+              <a href="kontakt.php" class="text-reset">Kontakt</a>
+            </p> -->
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Dane kontaktowe</h6>
+            <p>
+              <i class="bi bi-envelope-fill"></i>
+              neatsitespl@gmail.com
+            </p>
+            <p><i class="bi bi-facebook"></i> Gabriel Olszewski</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </footer>
+
+<script>
+
+document.getElementById("particles-js").style.height = document.getElementById("firstMain").clientHeight+document.getElementById("secondMain").clientHeight+document.getElementById("slajd").clientHeight+"px";
+
+
+  particlesJS("particles-js", {"particles":{"number":{"value":45,"density":{"enable":true,"value_area":800}},"color":{"value":"#c4c6cf"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":2,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+
+ 
+</script>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+  <script src="gsap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
