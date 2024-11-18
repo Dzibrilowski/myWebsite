@@ -15,6 +15,10 @@ html
 {
     background-color: var(--dark);
 }
+body, html
+{
+    overflow-x: hidden;
+}
 *
 {
     color: var(--light);
