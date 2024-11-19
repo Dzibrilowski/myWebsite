@@ -76,17 +76,22 @@ body, html
     {
         padding-bottom: 1rem;
     }    
+    #particles-js
+    {
+        display: none;
+    }
 }
 @media only screen and (max-width:992px) {
     .banner
-        {
-            height: 70vw !important;
-            margin-bottom: calc(var(--small) + 8px) ;
-        } 
-        .main
     {
-      padding: var(--small) !important; 
-        }
+        height: 70vw !important;
+        margin-bottom: calc(var(--small) + 8px) ;
+    } 
+    .main
+    {
+        padding: var(--small) !important; 
+    }
+    
     }
 
 .banner
